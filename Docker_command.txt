@@ -5,7 +5,7 @@ $ sudo docker stop ai && sudo docker rm ai && sudo docker rmi demo:1.0
 
 
 Now upload latest file of docker_ai.zip from S3 in home directory: 
-$ sudo docker build -t demo:1.0 .
+$ sudo docker build -t demo:1.0 /home/ubuntu/Jenkins-demo
 $ sudo docker run -d -p 9999:9999 --restart always --name "ai" demo:1.0
 $ sudo docker logs ai
 
