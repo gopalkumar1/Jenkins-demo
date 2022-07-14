@@ -1,0 +1,9 @@
+Remove all old docker images and old build by following below mentioned steps
+sudo docker stop ai && sudo docker rm ai && sudo docker rmi ai-engine:1.0
+sudo rm -r /home/<user_name>/docker_ai.zip /home/<user_name>/docker_ai
+
+
+Now upload latest file of docker_ai.zip from S3 in home directory: 
+unzip docker_ai.zip
+sudo docker build -t ai-engine:1.0 /home/<user_name>/docker_ai
+sudo docker run -d -p 9999:9999 --restart always --name "ai" ai-engine:1.0
