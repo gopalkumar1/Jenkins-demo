@@ -9,6 +9,34 @@ $ sudo docker build -t demo:1.0 /home/ubuntu/Jenkins-demo
 $ sudo docker run -d -p 9999:9999 --restart always --name "ai" demo:1.0
 $ sudo docker logs ai
 
+
 #unzip docker_ai.zip
 #sudo docker build -t ai-engine:1.0 /home/<user_name>/docker_ai
 #sudo docker run -d -p 9999:9999 --restart always --name "ai" ai-engine:1.0
+
+echo "print statement for test"
+sudo apt update
+sudo docker stop ai && sudo docker rm ai && sudo docker rmi demo:1.0
+sudo apt install docker.io -y
+ls
+pwd
+sudo docker build -t demo:1.0 .
+sudo docker run -d -p 9999:9999 --restart always --name "ai" demo:1.0
+sudo docker ps
+
+
+echo "print statement for test"
+sudo apt update
+#git clone https://github.com/gopalkumar1/Jenkins-demo.git
+sudo docker stop ai && sudo docker rm ai && sudo docker rmi demo:1.0
+#sudo apt install docker.io -y
+ls
+pwd
+sudo docker build -t demo:1.0 .
+#sudo docker build -t demo:1.0 /home/ubuntu/jenkins/workspace/Test-Project/Jenkins-demo
+sudo docker run -d -p 9999:9999 --restart always --name "ai" demo:1.0
+sudo docker ps
+#sudo docker logs ai
+#telnet 44.200.202.198 9999
+#curl http://44.200.202.198:9999/
+
